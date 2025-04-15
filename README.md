@@ -1,4 +1,4 @@
-# Multilingual AI Assistant
+# AI Assistant with robust speech recognition functionality
 
 A voice-controlled AI assistant with multilingual support (English and Hindi) that can direct users to different specialized assistant functions based on their requests. The assistant can handle reading, walking, and navigation tasks, as well as answer general knowledge questions.
 
@@ -141,9 +141,7 @@ pip install -r requirements.txt
 - **Camera Issues**: Verify that your camera is properly connected and not being used by another application.
 - **API Key Errors**: Confirm that your Groq API key is correctly set in the `.env` file.
 
-## License
 
-[Specify your license here]
 
 ## Acknowledgments
 
