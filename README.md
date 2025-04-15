@@ -1,4 +1,4 @@
-# AI Assistant with robust speech recognition functionality
+# AI Assistant with Robust Speech Recognition Functionality
 
 A voice-controlled AI assistant with multilingual support (English and Hindi) that can direct users to different specialized assistant functions based on their requests. The assistant can handle reading, walking, and navigation tasks, as well as answer general knowledge questions.
 
