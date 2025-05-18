@@ -18,13 +18,12 @@ A voice-controlled AI assistant with multilingual support (English and Hindi) th
 
 ## UI Preview
 
-Here's how the AI Assistant interface looks like:
+Here's how the UI interface looks like:
 
 ![image](https://github.com/user-attachments/assets/3ff7b9db-423d-4697-a99f-5b90b84b408e)
 
 *Screenshot: The main interface of the AI Assistant showing the chat interface and assistant selection*
 
-*Note: Replace the above comment with your actual screenshot path once you have it.*
 
 ## Prerequisites
 
