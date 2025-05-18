@@ -1,0 +1,14 @@
+pyttsx3>=2.90
+python-dotenv>=0.19.0
+SpeechRecognition>=3.8.1
+sounddevice>=0.4.4
+numpy>=1.20.0
+langchain>=0.0.267
+langchain-groq>=0.0.3
+opencv-python>=4.5.0
+PyAudio>=0.2.11
+streamlit>=1.22.0
+pathlib
+extra-streamlit-components>=0.1.5
+streamlit-webrtc>=0.45.0
+pillow>=9.0.0
