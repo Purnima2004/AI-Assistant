@@ -16,6 +16,17 @@ A voice-controlled AI assistant with multilingual support (English and Hindi) th
   - Navigation Assistant (helps with directions and routes)
 - **General Knowledge**: Answers general questions using LLM
 
+## UI Preview
+
+Here's how the AI Assistant interface looks like:
+
+<!-- Add your screenshot here -->
+<!-- Example: ![AI Assistant UI](screenshots/ai-assistant-ui.png) -->
+
+*Screenshot: The main interface of the AI Assistant showing the chat interface and assistant selection*
+
+*Note: Replace the above comment with your actual screenshot path once you have it.*
+
 ## Prerequisites
 
 Before you can use this AI assistant, you need to install the following dependencies:
