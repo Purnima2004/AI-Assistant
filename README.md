@@ -47,6 +47,32 @@ streamlit run app.py
 
 Open the URL provided by Streamlit in your browser. Choose the desired assistant and interact using text, voice, or camera input.
 
+## Deployment
+
+### Prerequisites
+
+1. A GitHub account
+2. A Streamlit Cloud account (free tier available)
+3. A Groq API key (get it from [Groq Cloud](https://console.groq.com/))
+
+### Deploying to Streamlit Cloud
+
+1. **Push your code to GitHub**
+   - Create a new GitHub repository
+   - Push your code to the repository
+
+2. **Set up environment variables in Streamlit Cloud**
+   - Go to [Streamlit Cloud](https://share.streamlit.io/)
+   - Click "New app" and select your repository
+   - In the "Advanced settings", add the following environment variable:
+     - `GROQ_API_KEY`: Your Groq API key
+   - Set the Python version to 3.9 or higher
+   - Set the main file path to `app.py`
+   - Click "Deploy!"
+
+3. **Access your app**
+   - Once deployed, your app will be available at a URL like: `https://share.streamlit.io/your-username/your-repo-name`
+
 ## Environment Variables
 
 - `GROQ_API_KEY`: API key for accessing the Groq language model.

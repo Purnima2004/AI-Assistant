@@ -1,0 +1,30 @@
+[server]
+port = 8501
+headless = true
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+serverAddress = "0.0.0.0"
+serverPort = 8501
+
+[runner]
+# Set to true to enable the experimental fastReruns option
+fastReruns = true
+
+[client]
+# Enable or disable the ability to run the app in the browser without a server
+caching = true
+
+[logger]
+# Set the log level
+level = "info"
+
+[theme]
+# Set the theme
+base = "dark"
+primaryColor = "#61C695"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#1E1E1E"
+textColor = "#FAFAFA"
+font = "sans serif"
