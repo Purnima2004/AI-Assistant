@@ -1,14 +1,27 @@
-pyttsx3>=2.90
+# Core dependencies
 python-dotenv>=0.19.0
-SpeechRecognition>=3.8.1
-sounddevice>=0.4.4
 numpy>=1.20.0
+pillow>=9.0.0
+
+# Streamlit
+extra-streamlit-components>=0.1.5
+streamlit>=1.22.0
+streamlit-webrtc>=0.45.0
+
+# AI and Language Models
 langchain>=0.0.267
 langchain-groq>=0.0.3
-opencv-python>=4.5.0
-PyAudio>=0.2.11
-streamlit>=1.22.0
+
+# Computer Vision and Audio
+opencv-python-headless>=4.5.0  # Use headless version for server deployment
+
+# Audio processing (using pre-built wheels for compatibility)
+# PyAudio is replaced with sounddevice which is more compatible with cloud deployments
+sounddevice>=0.4.4
+SpeechRecognition>=3.8.1
+
+# Text-to-speech (optional, can be removed if not critical)
+pyttsx3>=2.90; sys_platform != 'linux'  # Exclude on Linux to avoid build issues
+
+# Other utilities
 pathlib
-extra-streamlit-components>=0.1.5
-streamlit-webrtc>=0.45.0
-pillow>=9.0.0

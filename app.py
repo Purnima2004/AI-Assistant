@@ -344,9 +344,12 @@ def recognize_speech():
     Returns:
         str: Recognized text or error message
     """
-    recognizer = sr.Recognizer()
+    # Check if we're running in a server environment without audio
+    if os.environ.get('IS_STREAMLIT_CLOUD') == 'true' or not hasattr(sr, 'Microphone'):
+        return "Speech recognition is not available in this environment. Please use text input instead."
     
     try:
+        recognizer = sr.Recognizer()
         with sr.Microphone() as source:
             st.write("Listening...")
             recognizer.adjust_for_ambient_noise(source)
@@ -368,15 +371,33 @@ def recognize_speech():
         return f"Error: {str(e)}"
 
 # Main application
+def is_streamlit_cloud():
+    """Check if the app is running on Streamlit Cloud."""
+    return os.environ.get('IS_STREAMLIT_CLOUD') == 'true' or 'share.streamlit.io' in os.environ.get('SERVER_NAME', '')
+
 def main():
+    # Set environment variable if running on Streamlit Cloud
+    if is_streamlit_cloud():
+        os.environ['IS_STREAMLIT_CLOUD'] = 'true'
+    
     # Apply custom styling
     apply_custom_style()
     
     # Empty container to reduce top space and add marquee
     st.markdown('<div style="margin-top:-75px;"></div>', unsafe_allow_html=True)
     
-    # Add a marquee scrolling text banner
-    st.markdown('<marquee behavior="scroll" direction="left" scrollamount="5" style="background: rgba(97, 198, 149, 0.3); padding: 8px; border-radius: 8px; margin-bottom: 15px;">Welcome to AI Assistant Hub! Ask questions, get reading help, walking guidance, and navigation assistance all in one place.</marquee>', unsafe_allow_html=True)
+    # Add a marquee scrolling text banner with environment notice if needed
+    if is_streamlit_cloud():
+        banner_text = "🔊 Note: Some features like speech recognition may be limited in the cloud environment."
+    else:
+        banner_text = "Welcome to AI Assistant Hub! Ask questions, get reading help, walking guidance, and navigation assistance all in one place."
+        
+    st.markdown(
+        f'<marquee behavior="scroll" direction="left" scrollamount="5" style="background: rgba(97, 198, 149, 0.3); padding: 8px; border-radius: 8px; margin-bottom: 15px;">'
+        f'{banner_text}'
+        '</marquee>', 
+        unsafe_allow_html=True
+    )
     
     # Initialize session state variables
     if 'chat_history' not in st.session_state:
